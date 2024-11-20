@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,11 +11,11 @@
     <!--=============== FAVICON ===============-->
     <link
       rel="shortcut icon"
-      href="./assets/images/icons8-al-rededor-del-mundo-16.png"
+      href="{% static   './assets/images/icons8-al-rededor-del-mundo-16.png' %}"
     />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="{% static   './assets/css/style.css' %}" />
 
     <!------- google font link------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -81,7 +82,7 @@
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand text-white" href="#"
             ><img
-              src="./assets/images/icons8-al-rededor-del-mundo-16.png"
+              src="{% static   './assets/images/icons8-al-rededor-del-mundo-16.png' %}"
               alt="icon"
             />
             PROPIEDADES</a
@@ -351,7 +352,7 @@
                   <figure class="card-banner">
                     <a href="#">
                       <img
-                        src="./assets/images/property-2.jpg"
+                        src="{% static   './assets/images/property-2.jpg' %}"
                         alt="Apartamentos Modernos"
                         class="w-100"
                       />
@@ -405,7 +406,7 @@
                     <div class="card-author">
                       <figure class="author-avatar">
                         <img
-                          src="./assets/images/author.jpeg"
+                          src="{% static   './assets/images/author.jpeg' %}"
                           alt="Vanessa Morales"
                           class="w-100"
                         />
@@ -442,7 +443,7 @@
                   <figure class="card-banner">
                     <a href="#">
                       <img
-                        src="./assets/images/property-1.jpg"
+                        src="{% static   './assets/images/property-1.jpg' %}"
                         alt="Nuevo Apartamento con Bonita Vista"
                         class="w-100"
                       />
@@ -494,7 +495,7 @@
                     <div class="card-author">
                       <figure class="author-avatar">
                         <img
-                          src="./assets/images/author.jpeg"
+                          src="{% static   './assets/images/author.jpeg' %}"
                           alt="Vanessa Morales"
                           class="w-100"
                         />
@@ -530,7 +531,7 @@
                   <figure class="card-banner">
                     <a href="#">
                       <img
-                        src="./assets/images/property-4.png"
+                        src="{% static   './assets/images/property-4.png' %}"
                         alt="Villa de Lujo en Rego Park"
                         class="w-100"
                       />
@@ -584,7 +585,7 @@
                     <div class="card-author">
                       <figure class="author-avatar">
                         <img
-                          src="./assets/images/author.jpeg"
+                          src="{% static   './assets/images/author.jpeg' %}"
                           alt="Vanessa Morales"
                           class="w-100"
                         />
@@ -624,11 +625,11 @@
       <div class="container">
         <figure class="about-banner">
           <img
-            src="./assets/images/about-banner-1.png"
+            src="{% static   './assets/images/about-banner-1.png' %}"
             alt="Interior de la casa"
           />
           <img
-            src="./assets/images/about-banner-2.jpg"
+            src="{% static   './assets/images/about-banner-2.jpg' %}"
             alt="Interior de la casa"
             class="abs-img"
           />
@@ -706,7 +707,7 @@
             <div class="service-card">
               <div class="card-icon">
                 <img
-                  src="./assets/images/service-1.png"
+                  src="{% static   './assets/images/service-1.png' %}"
                   alt="Ícono del Servicio"
                 />
               </div>
@@ -732,7 +733,7 @@
             <div class="service-card">
               <div class="card-icon">
                 <img
-                  src="./assets/images/service-2.png"
+                  src="{% static   './assets/images/service-2.png' %}"
                   alt="Ícono del Servicio"
                 />
               </div>
@@ -758,7 +759,7 @@
             <div class="service-card">
               <div class="card-icon">
                 <img
-                  src="./assets/images/service-3.png"
+                  src="{% static   './assets/images/service-3.png' %}"
                   alt="Ícono del Servicio"
                 />
               </div>
@@ -819,7 +820,7 @@
           <div class="footer-brand">
             <a href="#" class="logo">
               <img
-                src="./assets/images/logo-icons8-al-rededor-del-mundo-100.png"
+                src="{% static   './assets/images/logo-icons8-al-rededor-del-mundo-100.png' %}"
                 alt="Logo de Homeverse"
               />
             </a>
@@ -951,7 +952,7 @@
     </footer>
 
     <!--- custom js link -->
-    <!--<script src="./assets/js/script.js"></script>-->
+    <!--<script src="{% static   './assets/js/script.js' %}"></script>-->
 
     <!-- ionicon link https://ionic.io/ionicons-->
     <script
