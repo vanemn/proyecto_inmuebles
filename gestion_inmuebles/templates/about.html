@@ -1,5 +1,6 @@
-{% extends 'base.html' %} 
+{% extends "layout.html" %}
 {% load static %}
+{% block title %}About{% endblock %}
 {% block content %}
 
 <section class="about" id="about">
@@ -19,42 +20,40 @@
       </h2>
 
       <p class="about-text">
-        Más de 39,000 personas trabajan para nosotros en más de 70 países en
-        todo el mundo. Esta amplitud de cobertura global, combinada con
+        Son muchas personas trabajan para nosotros . Esta amplitud de cobertura global, combinada con
         servicios especializados.
+        Publica en un lugar seguro y si estas buscando un lugar para arrendar esta es tu mejor opción.
+        
       </p>
 
       <ul class="about-list">
+
         <li class="about-item">
           <div class="about-item-icon">
             <ion-icon name="home-outline"></ion-icon>
           </div>
-
-          <p class="about-item-text">Diseño de Hogar Inteligente</p>
-        </li>
-
-        <li class="about-item">
-          <div class="about-item-icon">
-            <ion-icon name="leaf-outline"></ion-icon>
-          </div>
-
-          <p class="about-item-text">Hermoso Entorno</p>
-        </li>
-
-        <li class="about-item">
-          <div class="about-item-icon">
-            <ion-icon name="wine-outline"></ion-icon>
-          </div>
-
-          <p class="about-item-text">Estilo de Vida Excepcional</p>
+          <p class="about-item-text">Encuentra el hogar que necesitas</p>
         </li>
 
         <li class="about-item">
           <div class="about-item-icon">
             <ion-icon name="shield-checkmark-outline"></ion-icon>
           </div>
+          <p class="about-item-text">La preparación te brindara seguridad</p>
+         </li>
 
-          <p class="about-item-text">Seguridad Completa 24/7</p>
+        <li class="about-item">
+          <div class="about-item-icon">
+            <ion-icon name="wine-outline"></ion-icon>
+          </div>
+          <p class="about-item-text">el lugar cercano a tus intereses</p>
+        </li>
+
+        <li class="about-item">
+        <div class="about-item-icon">
+          <ion-icon name="leaf-outline"></ion-icon>
+        </div>
+        <p class="about-item-text">Programa tus viajes con un entorno hermoso</p>
         </li>
       </ul>
 
