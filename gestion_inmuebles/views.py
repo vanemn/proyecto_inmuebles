@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout # Para gestionar la autenticación de usuarios
+from django.contrib import messages # Para mostrar mensajes de notificación al usuario
 
 # Create your views here.
 def home(request):
