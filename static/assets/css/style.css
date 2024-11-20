@@ -381,10 +381,6 @@ button, a { transition: var(--transition); }
 
 .about { padding-block: var(--section-padding); }
 
-.about-banner {
-  position: relative;
-  margin-bottom: 40px;
-}
 
 .about-banner > img {
   max-width: max-content;
@@ -1297,6 +1293,7 @@ button, a { transition: var(--transition); }
     max-width: 450px;
     margin-bottom: 40px;
   }
+
 
 
 
