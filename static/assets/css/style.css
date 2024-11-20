@@ -715,159 +715,6 @@ button, a { transition: var(--transition); }
 
 
 
-
-/*-----------------------------------*\
-  #FEATURES
-\*-----------------------------------*/
-
-.features {
-  background: var(--cultured-2);
-  padding-block: var(--section-padding);
-}
-
-.features-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px 20px;
-}
-
-.features-list > li { width: calc(50% - 10px); }
-
-.features-card {
-  position: relative;
-  background: var(--white);
-  padding: 40px 15px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-shadow: var(--shadow-1);
-}
-
-.features-card:is(:hover, :focus) { background: var(--orange-soda); }
-
-.features-card .card-icon {
-  background: var(--seashell);
-  color: var(--orange-soda);
-  width: 60px;
-  height: 60px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  font-size: 28px;
-}
-
-.features-card .card-icon ion-icon { --ionicon-stroke-width: 20px; }
-
-.features-card .card-title {
-  color: var(--dark-jungle-green);
-  font-family: var(--ff-poppins);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-600);
-  text-align: center;
-  transition: var(--transition);
-}
-
-.features-card:is(:hover, :focus) .card-title { color: var(--white); }
-
-.features-card .card-btn {
-  background: var(--white);
-  color: var(--cadet);
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px hsla(219, 56%, 21%, 0.1);
-  transition: var(--transition);
-}
-
-.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
-
-
-
-
-
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
-
-.blog { padding-block: var(--section-padding); }
-
-.blog-card { box-shadow: var(--shadow-2); }
-
-.blog-card .card-banner {
-  overflow: hidden;
-  aspect-ratio: 2 / 1.5;
-}
-
-.blog-card .card-banner img {
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s ease;
-}
-
-.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
-
-.blog-content { padding: 30px; }
-
-.blog-card .card-meta-list {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.blog-card :is(.card-meta-link, .publish-date) {
-  color: var(--cadet);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-600);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: var(--transition);
-}
-
-.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
-
-.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
-
-.blog-title {
-  font-size: 1rem;
-  --font-weight: var(--fw-600);
-}
-
-.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
-
-.blog-content-bottom {
-  padding-top: 20px;
-  border-top: 1px solid hsla(0, 0%, 0%, 0.1);
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.blog-card .read-more-btn {
-  color: var(--orange-soda);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-600);
-  text-transform: uppercase;
-}
-
-
-
-
-
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/
@@ -1204,36 +1051,6 @@ button, a { transition: var(--transition); }
 
 
   /**
-   * FEATURES
-   */
-
-  .features-list > li { width: calc(33.33% - 13.33px); }
-
-  .features-card { gap: 20px; }
-
-  .features-card .card-icon {
-    width: 80px;
-    height: 80px;
-    font-size: 32px;
-  }
-
-  .features-card .card-title { --fs-6: 1.125rem; }
-
-
-
-  /**
-   * BLOG
-   */
-
-  .blog-card { --fs-7: 0.875rem; }
-
-  .blog-title { font-size: 1.25rem; }
-
-  .blog .card-meta-list { gap: 30px; }
-
-
-
-  /**
    * CTA
    */
 
@@ -1347,24 +1164,7 @@ button, a { transition: var(--transition); }
 
 
 
-  /**
-   * FEATURES
-   */
-
-  .features-list { column-gap: 30px; }
-
-  .features-list > li { width: calc(25% - 30px); }
-
-
-
-  /**
-   * BLOG
-   */
-
-  .blog-title { font-size: 1.375rem; }
-
-
-
+  /
   /**
    * CTA
    */
@@ -1498,19 +1298,6 @@ button, a { transition: var(--transition); }
     margin-bottom: 40px;
   }
 
-
-
-  /**
-   * FEATURES
-   */
-
-  .features-card .card-icon {
-    width: 100px;
-    height: 100px;
-    font-size: 45px;
-  }
-
-  .features-card .card-title { --fs-6: 1.375rem; }
 
 
 
