@@ -47,7 +47,7 @@ class Inmueble(models.Model):
     )
     estacionamientos = models.IntegerField(null=True, blank=True)
     precio_mensual = models.DecimalField(
-        max_digits=10, decimal_places=2, null=True, blank=True
+        max_digits=10, decimal_places=0, null=True, blank=True
     )
 
     def __str__(self):

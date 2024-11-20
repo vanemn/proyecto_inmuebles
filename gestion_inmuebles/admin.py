@@ -16,7 +16,9 @@ class ComunaAdmin(admin.ModelAdmin):
 
 @admin.register(Inmueble)
 class InmuebleAdmin(admin.ModelAdmin):
+    #para definir columnas a mostrar
     list_display = (
+        "region",
         "comuna",
         "estado",
         "precio_min",
@@ -24,15 +26,16 @@ class InmuebleAdmin(admin.ModelAdmin):
         "tipo_inmueble",
         "fecha_inicio",
         "fecha_fin",
-        "nombre_autor",
-        "titulo_autor",
     )
-    search_fields = ("comuna__nombre", "estado", "nombre_autor")
+    
+    #para añadir a la barra de busqueda
+    search_fields = ("comuna__nombre", "estado", "tipo_inmueble")
+
+    #para añadir filtros
     list_filter = (
-        "estado",
-        "tipo_inmueble",
+        "region",
         "dormitorios",
-        "baños",
-        "precio_min",
-        "precio_max",
+        "estado",
+        "comuna",
+        "tipo_inmueble",
     )
