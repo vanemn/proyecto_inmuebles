@@ -1,970 +1,448 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!--Esta línea le dice a Internet Explorer que utilice el motor de renderizado más reciente y compatible (edge)-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de propiedades</title>
+{% block content %}
 
-    <!--=============== FAVICON ===============-->
-    <link
-      rel="shortcut icon"
-      href="{% static   './assets/images/icons8-al-rededor-del-mundo-16.png' %}"
-    />
+<!--====================HERO ====================-->
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="{% static   './assets/css/style.css' %}" />
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-subtitle">
+        <ion-icon name="home"></ion-icon>
 
-    <!------- google font link------>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
+        <span>Agencia Inmobiliaria</span>
+      </p>
 
-  <body>
-    <!--==================== HEADER ====================-->
-    <header class="header" data-header>
-      <div class="overlay" data-overlay></div>
-      <div class="header-top">
-        <div class="container">
-          <!-- Correo electrónico y ubicación -->
-          <ul class="header-top-list">
-            <li>
-              <a href="mailto:info@inmobiliaria.com" class="header-top-link">
-                <ion-icon name="mail-outline"></ion-icon>
-                <span>info@inmobiliaria.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="header-top-link">
-                <ion-icon name="location-outline"></ion-icon>
-                <span>Av. del Mar, La Serena, Chile</span>
-              </a>
-            </li>
-          </ul>
-          <!-- Iconos y botón -->
-          <div class="wrapper">
-            <ul class="header-top-social-list">
-              <li>
-                <a href="#" class="header-top-social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="header-top-social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="header-top-social-link">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="header-top-social-link">
-                  <ion-icon name="logo-pinterest"></ion-icon>
-                </a>
-              </li>
-            </ul>
-            <button class="header-top-btn">Añadir Anuncio</button>
-          </div>
-        </div>
-        <!--==================== NAV ====================-->
-        <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand text-white" href="#"
-            ><img
-              src="{% static   './assets/images/icons8-al-rededor-del-mundo-16.png' %}"
-              alt="icon"
-            />
-            PROPIEDADES</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            data-nav-open-btn
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#" data-nav-link
-                  >Inicio <span class="sr-only">(actual)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-nav-link>Enlace</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Desplegable</a
-                >
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#" data-nav-link>Acción</a>
-                  <a class="dropdown-item" href="#" data-nav-link
-                    >Otra acción</a
-                  >
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" data-nav-link
-                    >Algo más aquí</a
-                  >
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" data-nav-link
-                  >Deshabilitado</a
-                >
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Buscar"
-              />
-              <button
-                class="btn btn-outline-success my-2 my-sm-0 text-white"
-                type="submit"
-              >
-                Buscar
-              </button>
-            </form>
-          </div>
-        </nav>
-      </div>
-    </header>
+      <h2 class="h1 hero-title">
+        Encuentra la Casa de tus Sueños con Nosotros
+      </h2>
 
-    <!-- 
-  - #HERO
--->
+      <p class="hero-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore.
+      </p>
 
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <p class="hero-subtitle">
-            <ion-icon name="home"></ion-icon>
+      <button class="btn">Haz una Consulta</button>
+    </div>
 
-            <span>Agencia Inmobiliaria</span>
-          </p>
-
-          <h2 class="h1 hero-title">
-            Encuentra la Casa de tus Sueños con Nosotros
-          </h2>
-
-          <p class="hero-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore.
-          </p>
-
-          <button class="btn">Haz una Consulta</button>
-        </div>
-
-        <figure class="hero-banner">
-          <!-- <img src="./assets/images/hero-banner.png" alt="Modelo de casa moderna" class="w-100">-->
-          <div id="main-slider" class="flexslider">
-            <div class="flex-caption">
-              <div class="col-md-12 col-sm-12">
-                <div class="quick-search">
-                  <form method="get" role="form">
-                    <div class="row">
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                          <label for="region">Región</label>
-                          <select
-                            class="form-control"
-                            id="region"
-                            name="region"
-                          >
-                            <option>I</option>
-                            <option>II</option>
-                            <option>III</option>
-                            <option>IV</option>
-                            <option>V</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="bedroom">Dormitorios</label>
-                          <select
-                            class="form-control"
-                            id="bedroom"
-                            name="bedroom"
-                          >
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                          <label for="comuna">Comuna</label>
-                          <select
-                            class="form-control"
-                            id="comuna"
-                            name="comuna"
-                          >
-                            <option>a</option>
-                            <option>b</option>
-                            <option>c</option>
-                            <option>d</option>
-                            <option>e</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="bathroom">Baños</label>
-                          <select
-                            class="form-control"
-                            id="bathroom"
-                            name="bathroom"
-                          >
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                          <label for="status">Estado de la propiedad</label>
-                          <select
-                            class="form-control"
-                            id="status"
-                            name="status"
-                          >
-                            <option>En Venta</option>
-                            <option>En Alquiler</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="minprice">Precio Mínimo uf</label>
-                          <select
-                            class="form-control"
-                            id="minprice"
-                            name="minprice"
-                          >
-                            <option>desde $1,400</option>
-                            <option>desde $2,300</option>
-                            <option>desde $3,100</option>
-                            
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                          <label for="type">Tipo</label>
-                          <select class="form-control" id="type" name="type">
-                            <option>Residencial</option>
-                            <option>Comercial</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="maxprice">Precio Máximo</label>
-                          <select
-                            class="form-control"
-                            id="maxprice"
-                            name="maxprice"
-                          >
-                            <option>$2,400</option>
-                            <option>$6,300</option>
-                            <option>$9,100</option>
-                            <option>$10,100</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                          <label for="start_date">Fecha de Inicio</label>
-                          <input
-                            type="date"
-                            class="form-control"
-                            id="start_date"
-                            name="start_date"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="form-group">
-                          <label for="end_date">Fecha de Fin</label>
-                          <input
-                            type="date"
-                            class="form-control"
-                            id="end_date"
-                            name="end_date"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-md-12 col-sm-12">
-                        <input
-                          name="submit"
-                          value="Buscar"
-                          class="btn btn-success btn-lg btn-block"
-                          type="submit"
-                        />
-                      </div>
+    <figure class="hero-banner">
+      <!-- <img src="./assets/images/hero-banner.png" alt="Modelo de casa moderna" class="w-100">-->
+      <div id="main-slider" class="flexslider">
+        <div class="flex-caption">
+          <div class="col-md-12 col-sm-12">
+            <div class="quick-search">
+              <form method="get" role="form">
+                <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                      <label for="region">Región</label>
+                      <select class="form-control" id="region" name="region">
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                      </select>
                     </div>
-                  </form>
+                    <div class="form-group">
+                      <label for="bedroom">Dormitorios</label>
+                      <select class="form-control" id="bedroom" name="bedroom">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                      <label for="comuna">Comuna</label>
+                      <select class="form-control" id="comuna" name="comuna">
+                        <option>a</option>
+                        <option>b</option>
+                        <option>c</option>
+                        <option>d</option>
+                        <option>e</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="bathroom">Baños</label>
+                      <select
+                        class="form-control"
+                        id="bathroom"
+                        name="bathroom"
+                      >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                      <label for="status">Estado de la propiedad</label>
+                      <select class="form-control" id="status" name="status">
+                        <option>En Venta</option>
+                        <option>En Alquiler</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="minprice">Precio Mínimo uf</label>
+                      <select
+                        class="form-control"
+                        id="minprice"
+                        name="minprice"
+                      >
+                        <option>desde $1,400</option>
+                        <option>desde $2,300</option>
+                        <option>desde $3,100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                      <label for="type">Tipo</label>
+                      <select class="form-control" id="type" name="type">
+                        <option>Residencial</option>
+                        <option>Comercial</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="maxprice">Precio Máximo</label>
+                      <select
+                        class="form-control"
+                        id="maxprice"
+                        name="maxprice"
+                      >
+                        <option>$2,400</option>
+                        <option>$6,300</option>
+                        <option>$9,100</option>
+                        <option>$10,100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                      <label for="start_date">Fecha de Inicio</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="start_date"
+                        name="start_date"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="form-group">
+                      <label for="end_date">Fecha de Fin</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="end_date"
+                        name="end_date"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12">
+                    <input
+                      name="submit"
+                      value="Buscar"
+                      class="btn btn-success btn-lg btn-block"
+                      type="submit"
+                    />
+                  </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
-        </figure>
+        </div>
       </div>
-    </section>
+    </figure>
+  </div>
+</section>
 
-    <!-- 
+<!-- 
         - #PROPERTY RENT
       -->
-    <section class="property" id="property">
-      <div class="container">
-        <p class="section-subtitle">Propiedades</p>
-        <h2 class="h2 section-title">Alquiler</h2>
+<section class="property" id="property">
+  <div class="container">
+    <p class="section-subtitle">Propiedades</p>
+    <h2 class="h2 section-title">Alquiler</h2>
 
-        <div class="row">
-          <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="property-card">
+          <!-- Contenido de la tarjeta 1 -->
+          <li>
             <div class="property-card">
-              <!-- Contenido de la tarjeta 1 -->
-              <li>
-                <div class="property-card">
-                  <figure class="card-banner">
-                    <a href="#">
-                      <img
-                        src="{% static   './assets/images/property-2.jpg' %}"
-                        alt="Apartamentos Modernos"
-                        class="w-100"
-                      />
-                    </a>
-                    <div class="card-badge orange">Reservada</div>
-                    <div class="banner-actions">
-                      <button class="banner-actions-btn">
-                        <ion-icon name="location"></ion-icon>
-                        <address>Santiago, Chile</address>
-                      </button>
-                      <button class="banner-actions-btn">
-                        <ion-icon name="camera"></ion-icon>
-                        <span>4</span>
-                      </button>
-                      <button class="banner-actions-btn">
-                        <ion-icon name="film"></ion-icon>
-                        <span>2</span>
-                      </button>
-                    </div>
+              <figure class="card-banner">
+                <a href="#">
+                  <img
+                    src="{% static './assets/images/property-2.jpg' %}"
+                    alt="Apartamentos Modernos"
+                    class="w-100"
+                  />
+                </a>
+                <div class="card-badge orange">Reservada</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Santiago, Chile</address>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="camera"></ion-icon>
+                    <span>4</span>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="film"></ion-icon>
+                    <span>2</span>
+                  </button>
+                </div>
+              </figure>
+              <div class="card-content">
+                <div class="card-price"><strong>$1.200.000</strong>/Mes</div>
+                <h3 class="h3 card-title">
+                  <a href="#">Apartamentos Modernos</a>
+                </h3>
+                <p class="card-text">
+                  Hermosa y enorme casa familiar en el corazón de Westbury.
+                  Recién renovada con nueva madera.
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>3</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Dormitorios</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Baños</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>345</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>m²</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <div class="card-author">
+                  <figure class="author-avatar">
+                    <img
+                      src="{% static './assets/images/author.jpeg' %}"
+                      alt="Vanessa Morales"
+                      class="w-100"
+                    />
                   </figure>
-                  <div class="card-content">
-                    <div class="card-price">
-                      <strong>$1.200.000</strong>/Mes
-                    </div>
-                    <h3 class="h3 card-title">
-                      <a href="#">Apartamentos Modernos</a>
-                    </h3>
-                    <p class="card-text">
-                      Hermosa y enorme casa familiar en el corazón de Westbury.
-                      Recién renovada con nueva madera.
+                  <div>
+                    <p class="author-name">
+                      <a href="#">Vanessa Morales</a>
                     </p>
-                    <ul class="card-list">
-                      <li class="card-item">
-                        <strong>3</strong>
-                        <ion-icon name="bed-outline"></ion-icon>
-                        <span>Dormitorios</span>
-                      </li>
-                      <li class="card-item">
-                        <strong>2</strong>
-                        <ion-icon name="man-outline"></ion-icon>
-                        <span>Baños</span>
-                      </li>
-                      <li class="card-item">
-                        <strong>345</strong>
-                        <ion-icon name="square-outline"></ion-icon>
-                        <span>m²</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-footer">
-                    <div class="card-author">
-                      <figure class="author-avatar">
-                        <img
-                          src="{% static   './assets/images/author.jpeg' %}"
-                          alt="Vanessa Morales"
-                          class="w-100"
-                        />
-                      </figure>
-                      <div>
-                        <p class="author-name">
-                          <a href="#">Vanessa Morales</a>
-                        </p>
-                        <p class="author-title">Agentes Inmobiliarios</p>
-                      </div>
-                    </div>
-                    <div class="card-footer-actions">
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="resize-outline"></ion-icon>
-                      </button>
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                      </button>
-                    </div>
+                    <p class="author-title">Agentes Inmobiliarios</p>
                   </div>
                 </div>
-              </li>
+                <div class="card-footer-actions">
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="resize-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
+          </li>
+        </div>
+      </div>
 
-          <div class="col-md-4">
+      <div class="col-md-4">
+        <div class="property-card">
+          <!-- Contenido de la tarjeta 2 -->
+          <li>
             <div class="property-card">
-              <!-- Contenido de la tarjeta 2 -->
-              <li>
-                <div class="property-card">
-                  <figure class="card-banner">
-                    <a href="#">
-                      <img
-                        src="{% static   './assets/images/property-1.jpg' %}"
-                        alt="Nuevo Apartamento con Bonita Vista"
-                        class="w-100"
-                      />
-                    </a>
-                    <div class="card-badge green">En Alquiler</div>
-                    <div class="banner-actions">
-                      <button class="banner-actions-btn">
-                        <ion-icon name="location"></ion-icon>
-                        <address>La Serena, Coquimbo</address>
-                      </button>
-                      <button class="banner-actions-btn">
-                        <ion-icon name="camera"></ion-icon>
-                        <span>4</span>
-                      </button>
-                      <button class="banner-actions-btn">
-                        <ion-icon name="film"></ion-icon>
-                        <span>2</span>
-                      </button>
-                    </div>
+              <figure class="card-banner">
+                <a href="#">
+                  <img
+                    src="{% static './assets/images/property-1.jpg' %}"
+                    alt="Nuevo Apartamento con Bonita Vista"
+                    class="w-100"
+                  />
+                </a>
+                <div class="card-badge green">En Alquiler</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>La Serena, Coquimbo</address>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="camera"></ion-icon>
+                    <span>4</span>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="film"></ion-icon>
+                    <span>2</span>
+                  </button>
+                </div>
+              </figure>
+              <div class="card-content">
+                <div class="card-price"><strong>$500.000</strong>/Mes</div>
+                <h3 class="h3 card-title">
+                  <a href="#">Nuevo Apartamento con Bonita Vista</a>
+                </h3>
+                <p class="card-text">
+                  Hermosa y enorme casa familiar en el corazón de Westbury.
+                  Recién renovada con nueva madera.
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>3</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Dormitorios</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Baños</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>250</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>m²</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <div class="card-author">
+                  <figure class="author-avatar">
+                    <img
+                      src="{% static './assets/images/author.jpeg' %}"
+                      alt="Vanessa Morales"
+                      class="w-100"
+                    />
                   </figure>
-                  <div class="card-content">
-                    <div class="card-price"><strong>$500.000</strong>/Mes</div>
-                    <h3 class="h3 card-title">
-                      <a href="#">Nuevo Apartamento con Bonita Vista</a>
-                    </h3>
-                    <p class="card-text">
-                      Hermosa y enorme casa familiar en el corazón de Westbury.
-                      Recién renovada con nueva madera.
+                  <div>
+                    <p class="author-name">
+                      <a href="#">Vanessa Morales</a>
                     </p>
-                    <ul class="card-list">
-                      <li class="card-item">
-                        <strong>3</strong>
-                        <ion-icon name="bed-outline"></ion-icon>
-                        <span>Dormitorios</span>
-                      </li>
-                      <li class="card-item">
-                        <strong>2</strong>
-                        <ion-icon name="man-outline"></ion-icon>
-                        <span>Baños</span>
-                      </li>
-                      <li class="card-item">
-                        <strong>250</strong>
-                        <ion-icon name="square-outline"></ion-icon>
-                        <span>m²</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-footer">
-                    <div class="card-author">
-                      <figure class="author-avatar">
-                        <img
-                          src="{% static   './assets/images/author.jpeg' %}"
-                          alt="Vanessa Morales"
-                          class="w-100"
-                        />
-                      </figure>
-                      <div>
-                        <p class="author-name">
-                          <a href="#">Vanessa Morales</a>
-                        </p>
-                        <p class="author-title">Agentes Inmobiliarios</p>
-                      </div>
-                    </div>
-                    <div class="card-footer-actions">
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="resize-outline"></ion-icon>
-                      </button>
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                      </button>
-                    </div>
+                    <p class="author-title">Agentes Inmobiliarios</p>
                   </div>
                 </div>
-              </li>
+                <div class="card-footer-actions">
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="resize-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
+          </li>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="property-card">
+          <!-- Contenido de la tarjeta 3 -->
+          <li>
             <div class="property-card">
-              <!-- Contenido de la tarjeta 3 -->
-              <li>
-                <div class="property-card">
-                  <figure class="card-banner">
-                    <a href="#">
-                      <img
-                        src="{% static   './assets/images/property-4.png' %}"
-                        alt="Villa de Lujo en Rego Park"
-                        class="w-100"
-                      />
-                    </a>
-                    <div class="card-badge green">Disponible Próximamente</div>
-                    <div class="banner-actions">
-                      <button class="banner-actions-btn">
-                        <ion-icon name="location"></ion-icon>
-                        <address>Providencia, Santiago, Chile</address>
-                      </button>
-                      <button class="banner-actions-btn">
-                        <ion-icon name="camera"></ion-icon>
-                        <span>4</span>
-                      </button>
-                      <button class="banner-actions-btn">
-                        <ion-icon name="film"></ion-icon>
-                        <span>2</span>
-                      </button>
-                    </div>
+              <figure class="card-banner">
+                <a href="#">
+                  <img
+                    src="{% static './assets/images/property-4.png' %}"
+                    alt="Villa de Lujo en Rego Park"
+                    class="w-100"
+                  />
+                </a>
+                <div class="card-badge green">Disponible Próximamente</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Providencia, Santiago, Chile</address>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="camera"></ion-icon>
+                    <span>4</span>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="film"></ion-icon>
+                    <span>2</span>
+                  </button>
+                </div>
+              </figure>
+              <div class="card-content">
+                <div class="card-price"><strong>$1.000.000</strong>/Mes</div>
+                <h3 class="h3 card-title">
+                  <a href="#">Villa de Lujo en La Serena</a>
+                </h3>
+                <p class="card-text">
+                  Hermosa y enorme casa familiar en el corazón de Westbury.
+                  Recién renovada con nueva madera.
+                </p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>3</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Dormitorios</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Baños</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>450</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>m²</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <div class="card-author">
+                  <figure class="author-avatar">
+                    <img
+                      src="{% static './assets/images/author.jpeg' %}"
+                      alt="Vanessa Morales"
+                      class="w-100"
+                    />
                   </figure>
-                  <div class="card-content">
-                    <div class="card-price">
-                      <strong>$1.000.000</strong>/Mes
-                    </div>
-                    <h3 class="h3 card-title">
-                      <a href="#">Villa de Lujo en La Serena</a>
-                    </h3>
-                    <p class="card-text">
-                      Hermosa y enorme casa familiar en el corazón de Westbury.
-                      Recién renovada con nueva madera.
+                  <div>
+                    <p class="author-name">
+                      <a href="#">Vane Morales</a>
                     </p>
-                    <ul class="card-list">
-                      <li class="card-item">
-                        <strong>3</strong>
-                        <ion-icon name="bed-outline"></ion-icon>
-                        <span>Dormitorios</span>
-                      </li>
-                      <li class="card-item">
-                        <strong>2</strong>
-                        <ion-icon name="man-outline"></ion-icon>
-                        <span>Baños</span>
-                      </li>
-                      <li class="card-item">
-                        <strong>450</strong>
-                        <ion-icon name="square-outline"></ion-icon>
-                        <span>m²</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-footer">
-                    <div class="card-author">
-                      <figure class="author-avatar">
-                        <img
-                          src="{% static   './assets/images/author.jpeg' %}"
-                          alt="Vanessa Morales"
-                          class="w-100"
-                        />
-                      </figure>
-                      <div>
-                        <p class="author-name">
-                          <a href="#">Vane Morales</a>
-                        </p>
-                        <p class="author-title">Agentes Inmobiliarios</p>
-                      </div>
-                    </div>
-                    <div class="card-footer-actions">
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="resize-outline"></ion-icon>
-                      </button>
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                      </button>
-                    </div>
+                    <p class="author-title">Agentes Inmobiliarios</p>
                   </div>
                 </div>
-              </li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 
-  - #ABOUT
--->
-
-    <section class="about" id="about">
-      <div class="container">
-        <figure class="about-banner">
-          <img
-            src="{% static   './assets/images/about-banner-1.png' %}"
-            alt="Interior de la casa"
-          />
-
-        </figure>
-
-        <div class="about-content">
-          <p class="section-subtitle">Sobre Nosotros</p>
-
-          <h2 class="h2 section-title">
-            El Principal Mercado de Alquiler de Bienes Raíces.
-          </h2>
-
-          <p class="about-text">
-            Más de 39,000 personas trabajan para nosotros en más de 70 países en
-            todo el mundo. Esta amplitud de cobertura global, combinada con
-            servicios especializados.
-          </p>
-
-          <ul class="about-list">
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="home-outline"></ion-icon>
+                <div class="card-footer-actions">
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="resize-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </button>
+                </div>
               </div>
-
-              <p class="about-item-text">Diseño de Hogar Inteligente</p>
-            </li>
-
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="leaf-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Hermoso Entorno</p>
-            </li>
-
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="wine-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Estilo de Vida Excepcional</p>
-            </li>
-
-            <li class="about-item">
-              <div class="about-item-icon">
-                <ion-icon name="shield-checkmark-outline"></ion-icon>
-              </div>
-
-              <p class="about-item-text">Seguridad Completa 24/7</p>
-            </li>
-          </ul>
-
-          <p class="callout">
-            "Enimad minim veniam quis nostrud exercitation llamco laboris. Lorem
-            ipsum dolor sit amet"
-          </p>
-
-          <a href="#service" class="btn">Nuestros Servicios</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- 
-  - #SERVICIOS
--->
-
-    <section class="service" id="service">
-      <div class="container">
-        <p class="section-subtitle">Nuestros Servicios</p>
-
-        <h2 class="h2 section-title">Nuestro Enfoque Principal</h2>
-
-        <ul class="service-list">
-          <li>
-            <div class="service-card">
-              <div class="card-icon">
-                <img
-                  src="{% static   './assets/images/service-1.png' %}"
-                  alt="Ícono del Servicio"
-                />
-              </div>
-
-              <h3 class="h3 card-title">
-                <a href="#">Comprar una casa</a>
-              </h3>
-
-              <p class="card-text">
-                Más de 1 millón de casas en venta disponibles en el sitio web,
-                podemos coincidir contigo con una casa que querrás llamar hogar.
-              </p>
-
-              <a href="#" class="card-link">
-                <span>Encuentra un Hogar</span>
-
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
             </div>
           </li>
-
-          <li>
-            <div class="service-card">
-              <div class="card-icon">
-                <img
-                  src="{% static   './assets/images/service-2.png' %}"
-                  alt="Ícono del Servicio"
-                />
-              </div>
-
-              <h3 class="h3 card-title">
-                <a href="#">Alquilar una casa</a>
-              </h3>
-
-              <p class="card-text">
-                Más de 1 millón de casas en venta disponibles en el sitio web,
-                podemos coincidir contigo con una casa que querrás llamar hogar.
-              </p>
-
-              <a href="#" class="card-link">
-                <span>Encuentra un Hogar</span>
-
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-          </li>
-
-          <li>
-            <div class="service-card">
-              <div class="card-icon">
-                <img
-                  src="{% static   './assets/images/service-3.png' %}"
-                  alt="Ícono del Servicio"
-                />
-              </div>
-
-              <h3 class="h3 card-title">
-                <a href="#">Vender una casa</a>
-              </h3>
-
-              <p class="card-text">
-                Más de 1 millón de casas en venta disponibles en el sitio web,
-                podemos coincidir contigo con una casa que querrás llamar hogar.
-              </p>
-
-              <a href="#" class="card-link">
-                <span>Encuentra un Hogar</span>
-
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-
-  
-    <!-- 
-  - #CTA
--->
-
-    <section class="cta">
-      <div class="container">
-        <div class="cta-card">
-          <div class="card-content">
-            <h2 class="h2 card-title">¿Buscas la casa de tus sueños?</h2>
-
-            <p class="card-text">
-              Podemos ayudarte a hacer realidad tu sueño de una nueva casa
-            </p>
-          </div>
-
-          <button class="btn cta-btn">
-            <span>Explorar Propiedades</span>
-
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </button>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- 
-  - #FOOTER
--->
+{% endblock %}
+<!--==================== ABOUT ====================-->
 
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="footer-brand">
-            <a href="#" class="logo">
-              <img
-                src="{% static   './assets/images/logo-icons8-al-rededor-del-mundo-100.png' %}"
-                alt="Logo de Homeverse"
-              />
-            </a>
+<!--==================== SERVICIOS ====================-->
 
-            <p class="section-text">
-              Lorem Ipsum es simplemente un texto ficticio de la industria de la
-              impresión y composición tipográfica. Lorem Ipsum es texto ficticio
-              de la impresión.
-            </p>
-
-            <ul class="contact-list">
-              <li>
-                <a href="#" class="contact-link">
-                  <ion-icon name="location-outline"></ion-icon>
-                  <address>La Serena, Coquimbo. Chile</address>
-                </a>
-              </li>
-
-              <li>
-                <a href="tel:+5690000000" class="contact-link">
-                  <ion-icon name="call-outline"></ion-icon>
-                  <span>+56900000000</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="mailto:contact@propiedades.com" class="contact-link">
-                  <ion-icon name="mail-outline"></ion-icon>
-                  <span>vane.morales@gmail.com</span>
-                </a>
-              </li>
-            </ul>
-
-            <ul class="social-list">
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-link-box">
-            <ul class="footer-list">
-              <li>
-                <p class="footer-list-title">Empresa</p>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Sobre Nosotros</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Todos los Productos</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Mapa de Ubicaciones</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">FAQ</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Contáctanos</a>
-              </li>
-            </ul>
-
-            <ul class="footer-list">
-              <li>
-                <p class="footer-list-title">Servicios</p>
-              </li>
-
-
-              <li>
-                <a href="#" class="footer-link">Iniciar Sesión</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Mi Cuenta</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Términos y Condiciones</a>
-              </li>
-
-
-            <ul class="footer-list">
-              <li>
-                <p class="footer-list-title">Atención al Cliente</p>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link">Seguimiento </a>
-              </li>
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="copyright">
-            &copy; 2024 <a href="#">Vanessa Morales </a>. Todos los Derechos
-            Reservados
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!--- custom js link -->
-    <!--<script src="{% static   './assets/js/script.js' %}"></script>-->
-
-    <!-- ionicon link https://ionic.io/ionicons-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <!-- jquery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    <!-- bootstrap-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- flexslider-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
-  </body>
-</html>
+<!--==================== FOOTER ====================-->

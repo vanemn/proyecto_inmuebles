@@ -1,0 +1,373 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Esta línea le dice a Internet Explorer que utilice el motor de renderizado más reciente y compatible (edge)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de propiedades</title>
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="{% static   './assets/images/icons8-al-rededor-del-mundo-16.png' %}"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static   './assets/css/style.css' %}" />
+
+    <!------- google font link------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" data-header>
+      <div class="overlay" data-overlay></div>
+      <div class="header-top">
+        <div class="container">
+          <!-- Correo electrónico y ubicación -->
+          <ul class="header-top-list">
+            <li>
+              <a href="mailto:info@inmobiliaria.com" class="header-top-link">
+                <ion-icon name="mail-outline"></ion-icon>
+                <span>info@inmobiliaria.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header-top-link">
+                <ion-icon name="location-outline"></ion-icon>
+                <span>Av. del Mar, La Serena, Chile</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Iconos y botón -->
+          <div class="wrapper">
+            <ul class="header-top-social-list">
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="header-top-social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+            </ul>
+            <button class="header-top-btn">Añadir Anuncio</button>
+          </div>
+        </div>
+        <!--==================== NAV ====================-->
+        {%  include 'navbar.html' %}
+
+        <!--==================== HERO ====================-->
+
+{% block content %}
+  <!--home.html-->
+  <!--about.html-->
+  <!--otro-->
+{% endblock %}
+  
+
+
+<!--==================== SERVICIOS ====================-->
+
+    <section class="service" id="service">
+      <div class="container">
+        <p class="section-subtitle">Nuestros Servicios</p>
+
+        <h2 class="h2 section-title">Nuestro Enfoque Principal</h2>
+
+        <ul class="service-list">
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="{% static   './assets/images/service-1.png' %}"
+                  alt="Ícono del Servicio"
+                />
+              </div>
+
+              <h3 class="h3 card-title">
+                <a href="#">Comprar una casa</a>
+              </h3>
+
+              <p class="card-text">
+                Más de 1 millón de casas en venta disponibles en el sitio web,
+                podemos coincidir contigo con una casa que querrás llamar hogar.
+              </p>
+
+              <a href="#" class="card-link">
+                <span>Encuentra un Hogar</span>
+
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="{% static   './assets/images/service-2.png' %}"
+                  alt="Ícono del Servicio"
+                />
+              </div>
+
+              <h3 class="h3 card-title">
+                <a href="#">Alquilar una casa</a>
+              </h3>
+
+              <p class="card-text">
+                Más de 1 millón de casas en venta disponibles en el sitio web,
+                podemos coincidir contigo con una casa que querrás llamar hogar.
+              </p>
+
+              <a href="#" class="card-link">
+                <span>Encuentra un Hogar</span>
+
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="service-card">
+              <div class="card-icon">
+                <img
+                  src="{% static   './assets/images/service-3.png' %}"
+                  alt="Ícono del Servicio"
+                />
+              </div>
+
+              <h3 class="h3 card-title">
+                <a href="#">Vender una casa</a>
+              </h3>
+
+              <p class="card-text">
+                Más de 1 millón de casas en venta disponibles en el sitio web,
+                podemos coincidir contigo con una casa que querrás llamar hogar.
+              </p>
+
+              <a href="#" class="card-link">
+                <span>Encuentra un Hogar</span>
+
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+  
+    <!-- 
+  - #CTA
+-->
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-card">
+          <div class="card-content">
+            <h2 class="h2 card-title">¿Buscas la casa de tus sueños?</h2>
+
+            <p class="card-text">
+              Podemos ayudarte a hacer realidad tu sueño de una nueva casa
+            </p>
+          </div>
+
+          <button class="btn cta-btn">
+            <span>Explorar Propiedades</span>
+
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+  - #FOOTER
+-->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img
+                src="{% static   './assets/images/logo-icons8-al-rededor-del-mundo-100.png' %}"
+                alt="Logo de Homeverse"
+              />
+            </a>
+
+            <p class="section-text">
+              Lorem Ipsum es simplemente un texto ficticio de la industria de la
+              impresión y composición tipográfica. Lorem Ipsum es texto ficticio
+              de la impresión.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <address>La Serena, Coquimbo. Chile</address>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+5690000000" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <span>+56900000000</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="mailto:contact@propiedades.com" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <span>vane.morales@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social-list">
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Empresa</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Sobre Nosotros</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Todos los Productos</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Mapa de Ubicaciones</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">FAQ</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Contáctanos</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Servicios</p>
+              </li>
+
+
+              <li>
+                <a href="#" class="footer-link">Iniciar Sesión</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Mi Cuenta</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Términos y Condiciones</a>
+              </li>
+
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Atención al Cliente</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Seguimiento </a>
+              </li>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            &copy; 2024 <a href="#">Vanessa Morales </a>. Todos los Derechos
+            Reservados
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--- custom js link -->
+    <!--<script src="{% static   './assets/js/script.js' %}"></script>-->
+
+    <!-- ionicon link https://ionic.io/ionicons-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- flexslider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+  </body>
+</html>
