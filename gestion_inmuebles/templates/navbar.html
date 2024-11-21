@@ -5,68 +5,43 @@
               src="{% static './assets/images/icons8-al-rededor-del-mundo-16.png' %}"
               alt="icon"
             />-->
-            PROPIEDADES</a
+            <h2>PROPIEDADES</h2></a
           >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            data-nav-open-btn
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+
+      <div class=" navbar" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#" data-nav-link
-                  >Inicio <span class="sr-only">(actual)</span></a
-                >
+                  <a class="nav-link" href="{% url 'home' %}" data-nav-link>
+                      Inicio <span class="sr-only">(actual)</span>
+                  </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}" data-nav-link>About</a>
+                  <a class="nav-link" href="{% url 'about' %}" data-nav-link>About</a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Sesiones Desplegable</a
-                >
-                
-                {% if user.is_authenticated %}
-
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                  <a class="dropdown-item" href="{% url 'logout' %}" data-nav-link>Logout</a
-                    >
-                {% else %}
-                  <a class="dropdown-item" href="{% url 'login' %}" data-nav-link>Login</a>
-
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" data-nav-link
-                    >Algo más aquí</a
+                  <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
                   >
-                </div>
-
-                {% endif %}
-
-                
+                      Sesiones Desplegable
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      {% if user.is_authenticated %}
+                          <a class="dropdown-item" href="{% url 'logout' %}" data-nav-link>Logout</a>
+                      {% else %}
+                          <a class="dropdown-item" href="{% url 'login' %}" data-nav-link>Login</a>
+                          <a class="dropdown-item" href="{% url 'register' %}" data-nav-link>Register</a>
+                      {% endif %}
+                  </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" data-nav-link
-                  >Deshabilitado</a
-                >
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
+          </ul>
+      </div>
+              <form class="form-inline my-2 my-lg-0">
               <input
                 class="form-control mr-sm-2"
                 type="search"

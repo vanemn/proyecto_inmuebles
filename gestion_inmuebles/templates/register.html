@@ -10,7 +10,24 @@
       </h2>
 
 
-    form
+      <div class="col-md-6 offset-md-3">
+
+        <br/><br/>
+<form method="POST" action="{% url 'register' %}">
+{% csrf_token %}
+
+{{ form.as_p }}
+<br/><br/>
+<button type="submit" class="btn btn-secondary">
+Registro
+</button>
+
+</form>
+
+<br/><br/>
+<br/><br/>
+
+    </div>
 
 </div>
 
