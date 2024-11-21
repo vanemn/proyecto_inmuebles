@@ -75,12 +75,22 @@
                 </a>
               </li>
             </ul>
-            <button class="header-top-btn">Añadir Anuncio</button>
+            <a href="{% url 'login' %}">
+              <button class="header-top-btn">Registrate</button>
+          </a>
+          
           </div>
         </div>
         <!--==================== NAV ====================-->
         {%  include 'navbar.html' %}
-
+        {% if messages %}
+            {% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+            {% endfor %}
+        {% endif %}
         <!--==================== HERO ====================-->
 
         {% block content %}{% endblock %}

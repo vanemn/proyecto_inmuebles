@@ -27,7 +27,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-nav-link>Enlace</a>
+                <a class="nav-link" href="{% url 'about' %}" data-nav-link>About</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -38,18 +38,27 @@
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  >Desplegable</a
+                  >Sesiones Desplegable</a
                 >
+                
+                {% if user.is_authenticated %}
+
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#" data-nav-link>Acción</a>
-                  <a class="dropdown-item" href="#" data-nav-link
-                    >Otra acción</a
-                  >
+
+                  <a class="dropdown-item" href="{% url 'logout' %}" data-nav-link>Logout</a
+                    >
+                {% else %}
+                  <a class="dropdown-item" href="{% url 'login' %}" data-nav-link>Login</a>
+
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" data-nav-link
                     >Algo más aquí</a
                   >
                 </div>
+
+                {% endif %}
+
+                
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" data-nav-link
