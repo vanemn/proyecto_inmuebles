@@ -50,7 +50,7 @@ def register_user(request):
 			user = authenticate(username=username, password=password)
 			login(request, user)
 			messages.success(request, ("Usuario registrado exitosamente..."))
-			return redirect('update_info')
+			return redirect('home') #indico pagina a que quiero redirigir mientras home, luego catalogo o especiales
 		else:
 			messages.success(request, ("Whoops! hay un problema, intente nuevamente..."))
 			return redirect('register')
