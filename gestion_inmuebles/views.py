@@ -1,6 +1,10 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, login, logout # Para gestionar la autenticación de usuarios
 from django.contrib import messages # Para mostrar mensajes de notificación al usuario
+from django.contrib.auth.models import User # Importa el modelo de usuario predeterminado de Django
+from django.contrib.auth.forms import UserCreationForm # Importa el formulario de creación de usuarios predeterminado de Django
+from .forms import SignUpForm # Importa formularios personalizados
+from django import forms
 
 # Create your views here.
 def home(request):
@@ -31,3 +35,25 @@ def logout_user(request):
 	logout(request)
 	messages.success(request, ("ya hiciste logout, gracias por esta sesión..."))
 	return redirect('home')
+
+
+# Función para registrar un nuevo usuario
+def register_user(request):
+	form = SignUpForm()
+	if request.method == "POST":
+		form = SignUpForm(request.POST)
+		if form.is_valid():
+			form.save()
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password1']
+			# log in user
+			user = authenticate(username=username, password=password)
+			login(request, user)
+			messages.success(request, ("Usuario registrado exitosamente..."))
+			return redirect('update_info')
+		else:
+			messages.success(request, ("Whoops! hay un problema, intente nuevamente..."))
+			return redirect('register')
+	else:
+		return render(request, 'register.html', {'form':form})
+
