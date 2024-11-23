@@ -1,0 +1,21 @@
+Comuna: Iquique
+  Nombre: Apartamento en Iquique, Descripción: Moderno apartamento en Iquique.
+
+Comuna:  La Serena
+  Nombre: Casa en La Serena, Descripción: Casa acogedora en La Serena.
+
+Comuna:  Viña del Mar
+  Nombre: Casa en Viña del Mar, Descripción: Amplia casa cerca de la playa en Viña del Mar.
+
+Comuna:  Concepción
+  Nombre: Casa en Concepción, Descripción: Casa grande en Concepción.
+
+Comuna:  Ñuñoa
+  Nombre: Apartamento en Ñuñoa, Descripción: Apartamento moderno en Ñuñoa.
+
+Comuna:  San Miguel
+  Nombre: Apartamento en San Miguel, Descripción: Cómodo apartamento en San Miguel.
+
+Comuna:  Maipú
+  Nombre: Apartamento en Maipú, Descripción: Apartamento económico en Maipú.
+

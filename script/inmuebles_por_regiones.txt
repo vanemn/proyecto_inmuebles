@@ -1,0 +1,17 @@
+Región: I de Tarapacá
+  Nombre: Apartamento en Iquique, Descripción: Moderno apartamento en Iquique.
+
+Región: V de Valparaíso
+  Nombre: Casa en Viña del Mar, Descripción: Amplia casa cerca de la playa en Viña del Mar.
+
+Región: IV de Coquimbo
+  Nombre: Casa en La Serena, Descripción: Casa acogedora en La Serena.
+
+Región: Metropolitana de Santiago
+  Nombre: Apartamento en Ñuñoa, Descripción: Apartamento moderno en Ñuñoa.
+  Nombre: Apartamento en San Miguel, Descripción: Cómodo apartamento en San Miguel.
+  Nombre: Apartamento en Maipú, Descripción: Apartamento económico en Maipú.
+
+Región: VIII del Biobío
+  Nombre: Casa en Concepción, Descripción: Casa grande en Concepción.
+
