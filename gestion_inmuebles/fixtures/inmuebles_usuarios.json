@@ -1,0 +1,263 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "usuario1",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario1@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "usuario2",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario2@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "usuario3",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario3@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "username": "usuario4",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario4@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "username": "usuario5",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario5@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "username": "usuario6",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario6@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "username": "usuario7",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario7@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "username": "usuario8",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario8@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 9,
+        "fields": {
+            "username": "usuario9",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario9@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 10,
+        "fields": {
+            "username": "usuario10",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "usuario10@example.com"
+        }
+    },
+         {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 1,
+            "fields": {
+                "nombre": "Casa en Arica",
+                "descripcion": "Una hermosa casa en Arica.",
+                "region": 1,
+                "comuna": 1,
+                "precio_min": 1200000.00,
+                "estado": "reservada",
+                "dormitorios": 3,
+                "baños": 2,
+                "tipo_inmueble": "Casa",
+                "m2_construidos": 100,
+                "m2_totales": 200
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 2,
+            "fields": {
+                "nombre": "Apartamento en Iquique",
+                "descripcion": "Moderno apartamento en Iquique.",
+                "region": 2,
+                "comuna": 6,
+                "precio_min": 900000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 2,
+                "baños": 1,
+                "tipo_inmueble": "Apartamento",
+                "m2_construidos": 70,
+                "m2_totales": 100
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 3,
+            "fields": {
+                "nombre": "Casa en Viña del Mar",
+                "descripcion": "Amplia casa cerca de la playa en Viña del Mar.",
+                "region": 6,
+                "comuna": 68,
+                "precio_min": 1500000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 4,
+                "baños": 3,
+                "tipo_inmueble": "Casa",
+                "m2_construidos": 150,
+                "m2_totales": 250
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 4,
+            "fields": {
+                "nombre": "Apartamento en Las Condes",
+                "descripcion": "Elegante apartamento en Las Condes.",
+                "region": 5,
+                "comuna": 4,
+                "precio_min": 1100000.00,
+                "estado": "reservada",
+                "dormitorios": 3,
+                "baños": 2,
+                "tipo_inmueble": "Apartamento",
+                "m2_construidos": 90,
+                "m2_totales": 120
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 5,
+            "fields": {
+                "nombre": "Casa en La Serena",
+                "descripcion": "Casa acogedora en La Serena.",
+                "region": 5,
+                "comuna": 30,
+                "precio_min": 800000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 3,
+                "baños": 2,
+                "tipo_inmueble": "Casa",
+                "m2_construidos": 100,
+                "m2_totales": 180
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 6,
+            "fields": {
+                "nombre": "Apartamento en Ñuñoa",
+                "descripcion": "Apartamento moderno en Ñuñoa.",
+                "region": 15,
+                "comuna": 304,
+                "precio_min": 950000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 2,
+                "baños": 1,
+                "tipo_inmueble": "Apartamento",
+                "m2_construidos": 70,
+                "m2_totales": 100
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 7,
+            "fields": {
+                "nombre": "Casa en Valparaíso",
+                "descripcion": "Casa con vistas al mar en Valparaíso.",
+                "region": 6,
+                "comuna": 67,
+                "precio_min": 1400000.00,
+                "estado": "reservada",
+                "dormitorios": 4,
+                "baños": 3,
+                "tipo_inmueble": "Casa",
+                "m2_construidos": 130,
+                "m2_totales": 220
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 8,
+            "fields": {
+                "nombre": "Apartamento en San Miguel",
+                "descripcion": "Cómodo apartamento en San Miguel.",
+                "region": 15,
+                "comuna": 313,
+                "precio_min": 700000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 1,
+                "baños": 1,
+                "tipo_inmueble": "Apartamento",
+                "m2_construidos": 50,
+                "m2_totales": 70
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 9,
+            "fields": {
+                "nombre": "Casa en Concepción",
+                "descripcion": "Casa grande en Concepción.",
+                "region": 9,
+                "comuna": 181,
+                "precio_min": 1300000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 4,
+                "baños": 3,
+                "tipo_inmueble": "Casa",
+                "m2_construidos": 160,
+                "m2_totales": 280
+            }
+        },
+        {
+            "model": "gestion_inmuebles.inmueble",
+            "pk": 10,
+            "fields": {
+                "nombre": "Apartamento en Maipú",
+                "descripcion": "Apartamento económico en Maipú.",
+                "region": 15,
+                "comuna": 320,
+                "precio_min": 600000.00,
+                "estado": "en_alquiler",
+                "dormitorios": 1,
+                "baños": 1,
+                "tipo_inmueble": "Apartamento",
+                "m2_construidos": 45,
+                "m2_totales": 60
+            }
+        }
+    ]
+    
