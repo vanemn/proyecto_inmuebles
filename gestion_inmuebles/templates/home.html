@@ -31,48 +31,47 @@
           <div class="col-md-12 col-sm-12">
             <div class="quick-search">
               <form method="get" role="form">
-                <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="row ">
+                  <div class="col-md-12 col-sm-12">
                     <div class="form-group">
                       <label for="region">Región</label>
                       {{ form.region }}
                     </div>
                     <div class="form-group">
+                      <label for="comuna">Comuna</label>
+                      {{ form.comuna }}
+                    </div>
+                    <li></li>
+                    <div class="form-group">
                       <label for="bedroom">Dormitorios</label>
                       {{ form.dormitorios }}
                     </div>
+                    <li></li>
                     <div class="form-group">
                       <label for="bathroom">Baños</label>
                       {{ form.baños }}
                     </div>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group">
-                      <label for="comuna">Comuna</label>
-                      {{ form.comuna }}
                     </div>
+
+
                     <div class="form-group">
                       <label for="type">Tipo</label>
                       {{ form.tipo_inmueble }}
                     </div>
-                  </div>
-                  {% if user.is_authenticated %}
-                  <!-- Opciones visibles solo para usuarios autenticados -->
-                  <div class="col-md-6 col-sm-6 col-xs-6">
+                    </div>
+                    {% if user.is_authenticated %}
+                    <!-- Opciones visibles solo para usuarios autenticados -->
+                   
                     <div class="form-group">
                       <label for="status">Estado de la propiedad</label>
                       {{ form.estado }}
                     </div>
                     <div class="form-group">
-                      <label for="minprice">Precio Mínimo uf</label>
+                      <label for="minprice">Precio uf</label>
                       {{ form.precio_min }}
                     </div>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group">
-                      <label for="maxprice">Precio Máximo</label>
-                      {{ form.precio_max }}
                     </div>
+                  
                     <div class="form-group">
                       <label for="start_date">Fecha de Inicio</label>
                       {{ form.fecha_inicio }}
@@ -100,6 +99,17 @@
 <!-- 
         - #PROPERTY RENT
       -->
+      {% if inmuebles %}
+      <div>
+         <h2>Resultados de Búsqueda</h2> 
+          <ul>
+           {% for inmueble in inmuebles %}
+             <li>{{ inmueble.nombre }} - {{ inmueble.precio_min }}</li>
+             {% endfor %} 
+          </ul>
+      </div>
+      {% endif %}
+
 <section class="property" id="property">
   <div class="container">
     <p class="section-subtitle">Propiedades</p>
@@ -195,15 +205,7 @@
         </div>
       </div>
 
-      {% if inmuebles %}
-      <div>
-         <h2>Resultados de Búsqueda</h2> 
-          <ul>
-           {% for inmueble in inmuebles %}
-             <li>{{ inmueble.nombre }} - {{ inmueble.precio_min }}</li>
-             {% endfor %} 
-          </ul>
-      </div> {% endif %}
+
 
       <div class="col-md-4">
         <div class="property-card">

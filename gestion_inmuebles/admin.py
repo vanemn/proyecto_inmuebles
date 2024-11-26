@@ -22,7 +22,7 @@ class InmuebleAdmin(admin.ModelAdmin):
         "comuna",
         "estado",
         "precio_min",
-        "precio_max",
+#        "precio_max",
         "tipo_inmueble",
         "fecha_inicio",
         "fecha_fin",
