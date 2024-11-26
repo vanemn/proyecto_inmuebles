@@ -37,18 +37,18 @@ def home(request):
             inmuebles = inmuebles.filter(dormitorios=form.cleaned_data['dormitorios'])
         if form.cleaned_data.get('baños'):
             inmuebles = inmuebles.filter(baños=form.cleaned_data['baños'])
-        if form.cleaned_data.get('tipo_inmueble'):
-            inmuebles = inmuebles.filter(tipo_inmueble=form.cleaned_data['tipo_inmueble'])
-        if form.cleaned_data.get('estado'):
-            inmuebles = inmuebles.filter(estado=form.cleaned_data['estado'])
-        if form.cleaned_data.get('precio_min'):
-            inmuebles = inmuebles.filter(precio_min__gte=form.cleaned_data['precio_min'])
-        if form.cleaned_data.get('precio_max'):
-            inmuebles = inmuebles.filter(precio_max__lte=form.cleaned_data['precio_max'])
-        if form.cleaned_data.get('fecha_inicio'):
-            inmuebles = inmuebles.filter(fecha_inicio__gte=form.cleaned_data['fecha_inicio'])
-        if form.cleaned_data.get('fecha_fin'):
-            inmuebles = inmuebles.filter(fecha_fin__lte=form.cleaned_data['fecha_fin'])
+#        if form.cleaned_data.get('tipo_inmueble'):
+#            inmuebles = inmuebles.filter(tipo_inmueble=form.cleaned_data['tipo_inmueble'])
+#        if form.cleaned_data.get('estado'):
+#            inmuebles = inmuebles.filter(estado=form.cleaned_data['estado'])
+#        if form.cleaned_data.get('precio_min'):
+#            inmuebles = inmuebles.filter(precio_min__gte=form.cleaned_data['precio_min'])
+#        if form.cleaned_data.get('precio_max'):
+#            inmuebles = inmuebles.filter(precio_max__lte=form.cleaned_data['precio_max'])
+#        if form.cleaned_data.get('fecha_inicio'):
+#            inmuebles = inmuebles.filter(fecha_inicio__gte=form.cleaned_data['fecha_inicio'])
+#        if form.cleaned_data.get('fecha_fin'):
+#            inmuebles = inmuebles.filter(fecha_fin__lte=form.cleaned_data['fecha_fin'])
 
     return render(request, "home.html", {"form": form, "inmuebles": inmuebles})
 

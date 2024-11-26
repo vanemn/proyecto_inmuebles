@@ -99,16 +99,91 @@
 <!-- 
         - #PROPERTY RENT
       -->
-      {% if inmuebles %}
-      <div>
-         <h2>Resultados de Búsqueda</h2> 
-          <ul>
-           {% for inmueble in inmuebles %}
-             <li>{{ inmueble.nombre }} - {{ inmueble.precio_min }}</li>
-             {% endfor %} 
-          </ul>
+      {% if inmuebles %}  
+      <h2>Resultados de Búsqueda</h2>
+      <br>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for inmueble in inmuebles %}
+          <div class="col">
+            <div class="property-card">
+              <!-- Contenido -->
+              <figure class="card-banner">
+                <a href="#">
+                  <img src="{% static './assets/images/property-1.jpg' %}" alt="Nuevo Apartamento con Bonita Vista" class="w-100"/>
+                </a>
+                <div class="card-badge green">En Alquiler</div>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>{{ inmueble.comuna }}, {{ inmueble.region }}</address>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="camera"></ion-icon>
+                    <span>4</span>
+                  </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="film"></ion-icon>
+                    <span>2</span>
+                  </button>
+                </div>
+              </figure>
+              <div class="card-content">
+                <div class="card-price"><strong>$ {{ inmueble.precio_min }}</strong>/Mes</div>
+                <h3 class="h3 card-title">
+                  <a href="#">{{ inmueble.nombre }}</a>
+                </h3>
+                <p class="card-text">{{ inmueble.descripcion }}</p>
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>{{ inmueble.dormitorios }}</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Dormitorios</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>{{ inmueble.baños }}</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Baños</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>{{ inmueble.m2_totales }}</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>m²</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <div class="card-author">
+                  <figure class="author-avatar">
+                    <img src="{% static './assets/images/author.jpeg' %}" alt="Vanessa Morales" class="w-100"/>
+                  </figure>
+                  <div>
+                    <p class="author-name">
+                      <a href="#">Vanessa Morales</a>
+                    </p>
+                    <p class="author-title">Agentes Inmobiliarios</p>
+                  </div>
+                </div>
+                <div class="card-footer-actions">
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="resize-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
       </div>
-      {% endif %}
+    {% endif %}
+    
+
 
 <section class="property" id="property">
   <div class="container">
@@ -295,6 +370,8 @@
           </li>
         </div>
       </div>
+
+
       <div class="col-md-4">
         <div class="property-card">
           <!-- Contenido de la tarjeta 3 -->

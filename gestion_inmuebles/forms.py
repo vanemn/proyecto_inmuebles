@@ -87,6 +87,6 @@ class InmuebleSearchForm(forms.Form):
     tipo_inmueble = forms.ChoiceField(choices=[("Residencial", "Residencial"), ("Comercial", "Comercial")], required=False, label="Tipo")
     estado = forms.ChoiceField(choices=[("En Venta", "En Venta"), ("En Alquiler", "En Alquiler")], required=False, label="Estado de la propiedad")
     precio_min = forms.DecimalField(max_digits=10, decimal_places=2, required=False, label="Precio Mínimo uf")
-    precio_max = forms.DecimalField(max_digits=10, decimal_places=2, required=False, label="Precio Máximo")
+#    precio_max = forms.DecimalField(max_digits=10, decimal_places=2, required=False, label="Precio Máximo")
     fecha_inicio = forms.DateField(widget=forms.SelectDateWidget, required=False, label="Fecha de Inicio")
     fecha_fin = forms.DateField(widget=forms.SelectDateWidget, required=False, label="Fecha de Fin")

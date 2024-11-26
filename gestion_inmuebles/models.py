@@ -32,7 +32,7 @@ class Inmueble(models.Model):
         max_length=20, choices=ESTADO_CHOICES, default="en_alquiler"
     )
     precio_min = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
-    precio_max = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
+#    precio_max = models.DecimalField(max_digits=10, decimal_places=2, default=0.0)
     tipo_inmueble = models.CharField(max_length=50)
     fecha_inicio = models.DateField(default=timezone.now)
     fecha_fin = models.DateField(default=timezone.now)
