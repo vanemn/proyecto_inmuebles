@@ -26,7 +26,6 @@
     </div>
 
     <figure class="hero-banner">
-      <!-- <img src="./assets/images/hero-banner.png" alt="Modelo de casa moderna" class="w-100">-->
       <div id="main-slider" class="flexslider">
         <div class="flex-caption">
           <div class="col-md-12 col-sm-12">
@@ -36,121 +35,57 @@
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
                       <label for="region">Región</label>
-                      <select class="form-control" id="region" name="region">
-                        <option>I</option>
-                        <option>II</option>
-                        <option>III</option>
-                        <option>IV</option>
-                        <option>V</option>
-                      </select>
+                      {{ form.region }}
                     </div>
                     <div class="form-group">
                       <label for="bedroom">Dormitorios</label>
-                      <select class="form-control" id="bedroom" name="bedroom">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
+                      {{ form.dormitorios }}
+                    </div>
+                    <div class="form-group">
+                      <label for="bathroom">Baños</label>
+                      {{ form.baños }}
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
                       <label for="comuna">Comuna</label>
-                      <select class="form-control" id="comuna" name="comuna">
-                        <option>a</option>
-                        <option>b</option>
-                        <option>c</option>
-                        <option>d</option>
-                        <option>e</option>
-                      </select>
+                      {{ form.comuna }}
                     </div>
                     <div class="form-group">
-                      <label for="bathroom">Baños</label>
-                      <select
-                        class="form-control"
-                        id="bathroom"
-                        name="bathroom"
-                      >
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                      </select>
+                      <label for="type">Tipo</label>
+                      {{ form.tipo_inmueble }}
                     </div>
                   </div>
+                  {% if user.is_authenticated %}
+                  <!-- Opciones visibles solo para usuarios autenticados -->
                   <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
                       <label for="status">Estado de la propiedad</label>
-                      <select class="form-control" id="status" name="status">
-                        <option>En Venta</option>
-                        <option>En Alquiler</option>
-                      </select>
+                      {{ form.estado }}
                     </div>
                     <div class="form-group">
                       <label for="minprice">Precio Mínimo uf</label>
-                      <select
-                        class="form-control"
-                        id="minprice"
-                        name="minprice"
-                      >
-                        <option>desde $1,400</option>
-                        <option>desde $2,300</option>
-                        <option>desde $3,100</option>
-                      </select>
+                      {{ form.precio_min }}
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-group">
-                      <label for="type">Tipo</label>
-                      <select class="form-control" id="type" name="type">
-                        <option>Residencial</option>
-                        <option>Comercial</option>
-                      </select>
-                    </div>
                     <div class="form-group">
                       <label for="maxprice">Precio Máximo</label>
-                      <select
-                        class="form-control"
-                        id="maxprice"
-                        name="maxprice"
-                      >
-                        <option>$2,400</option>
-                        <option>$6,300</option>
-                        <option>$9,100</option>
-                        <option>$10,100</option>
-                      </select>
+                      {{ form.precio_max }}
                     </div>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
                       <label for="start_date">Fecha de Inicio</label>
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="start_date"
-                        name="start_date"
-                      />
+                      {{ form.fecha_inicio }}
                     </div>
-                  </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
                     <div class="form-group">
                       <label for="end_date">Fecha de Fin</label>
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="end_date"
-                        name="end_date"
-                      />
+                      {{ form.fecha_fin }}
                     </div>
                   </div>
+                  {% endif %}
+                  <!-- Fin de las opciones de búsqueda adicionales -->
                   <div class="col-md-12 col-sm-12">
-                    <input
-                      name="submit"
-                      value="Buscar"
-                      class="btn btn-success btn-lg btn-block"
-                      type="submit"
-                    />
+                    <input name="submit" value="Buscar" class="btn btn-success btn-lg btn-block" type="submit" />
                   </div>
                 </div>
               </form>
@@ -259,6 +194,16 @@
           </li>
         </div>
       </div>
+
+      {% if inmuebles %}
+      <div>
+         <h2>Resultados de Búsqueda</h2> 
+          <ul>
+           {% for inmueble in inmuebles %}
+             <li>{{ inmueble.nombre }} - {{ inmueble.precio_min }}</li>
+             {% endfor %} 
+          </ul>
+      </div> {% endif %}
 
       <div class="col-md-4">
         <div class="property-card">

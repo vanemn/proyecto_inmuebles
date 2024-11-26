@@ -28,6 +28,29 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!--=============== jquery comunas ===============-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#id_region').change(function(){
+                var region_id = $(this).val();
+                $.ajax({
+                    url: '{% url "get_comunas" %}',
+                    data: {
+                        'region_id': region_id
+                    },
+                    success: function(data){
+                        var comuna_select = $('#id_comuna');
+                        comuna_select.empty();
+                        comuna_select.append('<option value="">---------</option>');
+                        $.each(data, function(key, value){
+                            comuna_select.append('<option value="' + value.id + '">' + value.nombre + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
   </head>
 
   <body>
