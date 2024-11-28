@@ -3,10 +3,64 @@ from django.contrib.auth.models import (
     User,
 )  # Importa el modelo de usuario predeterminado de Django
 from django.contrib.auth.forms import (
-    UserCreationForm, 
+    UserCreationForm, UserChangeForm,
 )  # Importa formularios de creación y cambio de usuario y formulario para establecer contraseña
 from django import forms  # Importa el módulo de formularios de Django
 from .models import Region, Comuna
+
+# Define un formulario personalizado para actualizar los datos del usuario
+class UpdateUserForm(UserChangeForm):
+    # Oculta el campo de contraseña
+    password = None
+    # Define los campos adicionales para el formulario
+    email = forms.EmailField(
+        label="",
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Email Address"}
+        ),
+    )
+    first_name = forms.CharField(
+        label="",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "First Name"}
+        ),
+    )
+    last_name = forms.CharField(
+        label="",
+        max_length=100,
+        widget=forms.TextInput(
+            attrs={"class": "form-control", "placeholder": "Last Name"}
+        ),
+    )
+    USER_TYPES = [
+        ("arrendador", "Arrendador"),
+        ("vendedor", "Vendedor"),
+        ("usuario_normal", "Usuario Normal"),
+    ]
+    user_type = forms.ChoiceField(
+        choices=USER_TYPES, widget=forms.RadioSelect, label="Tipo de Usuario"
+    )
+
+    class Meta:
+        model = User  # Define el modelo asociado con este formulario
+        fields = (
+            "username",
+            "first_name",
+            "last_name",
+            "email",
+        )
+
+    def __init__(self, *args, **kwargs):
+        super(UpdateUserForm, self).__init__(*args, **kwargs)
+        # Personaliza los atributos de los campos del formulario
+        self.fields["username"].widget.attrs["class"] = "form-control"
+        self.fields["username"].widget.attrs["placeholder"] = "User Name"
+        self.fields["username"].label = ""
+        self.fields["username"].help_text = (
+            '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
+        )
+
 
 # Define un formulario personalizado para el registro de nuevos usuarios
 class SignUpForm(UserCreationForm):
