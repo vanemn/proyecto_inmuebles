@@ -8,6 +8,7 @@ urlpatterns = [
     path('login/', views.login_user, name='login'),
     path('logout/', views.logout_user, name='logout'),
     path('register/', views.register_user, name='register'),
+    path('update_user/', views.update_user, name='update_user'),
     path('vendedor_home/', views.vendedor_home, name='vendedor_home'),
     path('arrendador_home/', views.arrendador_home, name='arrendador_home'),
     #path('accounts/', include('django.contrib.auth.urls')),  # Incluir URLs de autenticación

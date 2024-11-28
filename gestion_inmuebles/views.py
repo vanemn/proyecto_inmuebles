@@ -9,6 +9,14 @@ from .forms import InmuebleSearchForm
 from django.http import JsonResponse
 from .models import Comuna
 
+
+
+# Función para actualizar los datos del usuario
+def update_user(request):
+    return render(request, "update_user.html", {})
+    
+
+
 def get_comunas(request):
     region_id = request.GET.get('region_id')
     comunas = Comuna.objects.filter(region_id=region_id).values('id', 'nombre')

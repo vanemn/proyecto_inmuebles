@@ -32,6 +32,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       {% if user.is_authenticated %}
+                          <a class="dropdown-item" href="{% url 'update_user' %}" data-nav-link>Profile</a>
                           <a class="dropdown-item" href="{% url 'logout' %}" data-nav-link>Logout</a>
                       {% else %}
                           <a class="dropdown-item" href="{% url 'login' %}" data-nav-link>Login</a>

@@ -3,7 +3,7 @@ from django.contrib.auth.models import (
     User,
 )  # Importa el modelo de usuario predeterminado de Django
 from django.contrib.auth.forms import (
-    UserCreationForm,
+    UserCreationForm, 
 )  # Importa formularios de creación y cambio de usuario y formulario para establecer contraseña
 from django import forms  # Importa el módulo de formularios de Django
 from .models import Region, Comuna
