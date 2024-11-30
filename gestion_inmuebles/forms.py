@@ -1,4 +1,7 @@
 # Importa los modelos y formularios necesarios de Django y otros módulos
+from pyexpat import model
+from attr import fields
+from attrs import field
 from django.contrib.auth.models import (
     User,
 )  # Importa el modelo de usuario predeterminado de Django
@@ -6,8 +9,33 @@ from django.contrib.auth.forms import (
     UserCreationForm, UserChangeForm,
 )  # Importa formularios de creación y cambio de usuario y formulario para establecer contraseña
 from django import forms  # Importa el módulo de formularios de Django
-from .models import Region, Comuna
+from .models import Region, Comuna, Inmueble
+from django.forms import ModelForm
+from attrs import fields
 
+class Inmuebleform(ModelForm):
+    class Meta:
+        model = Inmueble
+        fields = [
+            "region", 
+            "comuna",
+            "nombre",
+            "dormitorios",
+            "baños",
+            "estado",
+            "tipo_inmueble",
+            "imagen",
+            "descripcion",
+            "m2_construidos",
+            "m2_totales",
+            "nombre_autor",
+            "titulo_autor",
+            "imagen_autor",
+            "estacionamientos",
+            "precio_mensual",
+        ]
+
+      
 # Define un formulario personalizado para actualizar los datos del usuario
 class UpdateUserForm(UserChangeForm):
     # Oculta el campo de contraseña

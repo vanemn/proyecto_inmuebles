@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
@@ -5,9 +6,10 @@ from django.contrib import messages
 from django.contrib.auth.models import User, Group
 from .forms import SignUpForm, UpdateUserForm
 from .models import Inmueble, Region, Comuna
-from .forms import InmuebleSearchForm
+from .forms import InmuebleSearchForm,Inmuebleform
 from django.http import JsonResponse
 from .models import Comuna
+
 
 
 
@@ -84,7 +86,12 @@ def arrendador_home(request):
 # Vista para vendedores
 @login_required
 def vendedor_home(request):
-    return render(request, "vendedor_home.html", {})
+        form = Inmuebleform()
+        context = {
+        "form" : form
+        }
+        return render (request,"vendedor_home.html",context)
+#    return render(request, "vendedor_home.html", {})
 
 
 # Vista para mostrar la página "Acerca de"
