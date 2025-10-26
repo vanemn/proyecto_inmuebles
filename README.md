@@ -39,7 +39,7 @@ Este proyecto web en Django permite gestionar registros de inmuebles, usuarios y
 
 📂 [Ver carpeta del hito 3](./hitos/hito3-registros)
 
-*(Puedes consultar los scripts y resultados en la carpeta del hito)*
+
 
 ---
 
@@ -64,10 +64,6 @@ Este proyecto web en Django permite gestionar registros de inmuebles, usuarios y
 
 📂 [Ver carpeta del hito 5](./hitos/hito5-registro)
 
-![Plantilla del proyecto](./hitos/hito5-registros/plantilla-de-proyectoWeb.png)
+![Plantilla del proyecto](./hitos/hito5-registro/plantilla-de-proyectoWeb.pdf)
 
 ---
-
-> ℹ️ Asegúrate de que las imágenes estén en la carpeta `hitos/` y que los nombres coincidan exactamente. Si el archivo PDF de la plantilla no está en imagen, puedes convertirlo o enlazarlo así:
-
-[📄 Ver plantilla PDF del proyecto](./hitos/plantilla-de-proyectoWeb.pdf)
