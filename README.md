@@ -26,9 +26,7 @@ Este proyecto web en Django permite gestionar registros de inmuebles, usuarios y
 
 📂 [Ver carpeta del hito 2](./hitos/hito2-registros)
 
-![Formulario de registro](./hitos/hito2-registros/15-registros-formularios.png)
-![Vista de registro](./hitos/hito2-registros/2-vista_registro.png)
-![URLs y vista](./hitos/hito2-registros/14-registro_urls_vista_registro_usuario.png)
+
 
 ---
 
@@ -51,9 +49,9 @@ Este proyecto web en Django permite gestionar registros de inmuebles, usuarios y
 
 📂 [Ver carpeta del hito 4](./hitos/hito4-registros)
 
-![Formulario HTML](./hitos/hito4-registros/5-actualizarFormularioDeUsuario_html_.png)
+
 ![Vista y formulario](./hitos/hito4-registros/6-updateUserForm_views_forms.png)
-![Redirección](./hitos/hito4-registros/8-UpdateUserForm_redireccion.png)
+
 
 ---
 
@@ -64,6 +62,6 @@ Este proyecto web en Django permite gestionar registros de inmuebles, usuarios y
 
 📂 [Ver carpeta del hito 5](./hitos/hito5-registro)
 
-![Plantilla del proyecto](./hitos/hito5-registro/plantilla-de-proyectoWeb.pdf)
+
 
 ---
